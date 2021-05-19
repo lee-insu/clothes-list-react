@@ -16,16 +16,17 @@ const TodayWeatherList = ({temperature}) => {
                 ...doc.data(),
                 id: doc.id,
             }
-            getClothes(summerObj);
+            getClothes(list => [summerObj,...list]);
         })
     }
 
     useEffect(()=> {
         clothesList();
     },[])
-     console.log(clothes.id);
+     console.log(clothes);
 
-    const summerClothes = <div key={clothes.id}><img src={clothes.imageURL} alt=""/></div>
+    const summerClothes = clothes.map(cloth => <li key ={cloth.id}><a href={cloth.link}><img src={cloth.imageURL}/></a></li>)
+
 
 
         let season = ""
@@ -70,7 +71,7 @@ const TodayWeatherList = ({temperature}) => {
 
 
     return(
-        <li>{season}</li>
+        <ul>{season}</ul>
     )
 
 }
