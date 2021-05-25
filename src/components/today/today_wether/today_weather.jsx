@@ -10,7 +10,6 @@ const TodayWeather = () => {
     const [weather,setWeather] = useState({});
     const [temperature, setTemp] = useState({});
     
-
     useEffect(() => {
 
       navigator.geolocation.getCurrentPosition(handleGeo)
@@ -26,9 +25,6 @@ const TodayWeather = () => {
             console.log(`location error:${error}`);
         }
       };
-    
-   
-
     },[])
 
     
