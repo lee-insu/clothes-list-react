@@ -12,31 +12,31 @@ const TodayWeatherList = ({temperature}) => {
         let color = ""
             switch(true) {
                 case (temp < -3):
-                    color = "black"
+                    color = " black"
                     break;
                 case (temp < 4):
-                    color = "purple"
+                    color = " purple"
                     break;
                 case (temp < 8):
-                    color = "indigo"
+                    color = " indigo"
                     break;
                 case (temp < 11):
-                    color = "blue"
+                    color = " blue"
                     break;
                 case (temp < 16):
-                    color = "green"
+                    color = " green"
                     break;
                 case (temp < 19):
-                    color = "yellow"
+                    color = " yellow"
                     break;
                 case (temp < 22):
-                    color = `orange`
+                    color = " orange"
                     break;
                 case (temp < 27):
-                    color = "27"
+                    color = " red"
                     break;
                 case (temp < 35):
-                    color = "red"
+                    color = " red"
                     break;
                 default :
                 ;
@@ -55,7 +55,6 @@ const TodayWeatherList = ({temperature}) => {
                 ...doc.data(),
             }));
           getClothes(array);
-          
         })
     }
 
@@ -64,7 +63,6 @@ const TodayWeatherList = ({temperature}) => {
         clothesList(tempSelect)
     },[tempSelect,temp])
 
-    
     const ClothesLi = clothes.map(cloth => <li key ={cloth.id}><a href={cloth.link}><img src={cloth.imageURL}/></a></li>)
 
 
