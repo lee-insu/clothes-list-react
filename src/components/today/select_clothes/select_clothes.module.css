@@ -1,0 +1,13 @@
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list > li {
+    margin: 1em 1.5em;
+    cursor: pointer;
+}
+
+.margin {
+margin: 2em 0;
+}

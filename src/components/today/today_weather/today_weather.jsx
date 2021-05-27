@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import TodayWeatherCtn from '../today_weather_ctn/today_weather_ctn';
-import TodayWeatherList from '../today_weather_list/today_weather_list';
 import dateBulider from '../../../service/dateBulider'
 import handleGeoSuccess from '../../../service/navigator';
+import SelectClothes from '../../today/select_clothes/select_clothes';
 
 const TodayWeather = () => {
 
@@ -10,6 +9,9 @@ const TodayWeather = () => {
     const [weather,setWeather] = useState({});
     const [temperature, setTemp] = useState({});
     
+
+
+
     useEffect(() => {
 
       navigator.geolocation.getCurrentPosition(handleGeo)
@@ -31,8 +33,7 @@ const TodayWeather = () => {
     return (
         <>
         <div className="date">{todayShow}</div>
-       <TodayWeatherCtn weather={weather}/>
-       <TodayWeatherList temperature ={temperature}/>
+       <SelectClothes weather={weather} temperature ={temperature}/>
        </>
     )
 

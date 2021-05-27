@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TodayWeatherCtn = (e) => {
+const TodayWeatherShow = (e) => {
     
 
     return (
@@ -17,4 +17,4 @@ const TodayWeatherCtn = (e) => {
     )
 };
 
-export default TodayWeatherCtn;
+export default TodayWeatherShow;

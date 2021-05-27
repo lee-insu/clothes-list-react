@@ -1,0 +1,43 @@
+.ul {
+    width: 100%;
+    height: 100%;
+    display:flex; 
+    align-content:flex-start; 
+    flex-direction:row; 
+    flex-wrap:wrap; 
+    overflow:auto;
+}
+
+.ul > li {
+    max-width: 300px;
+    height: auto;
+    margin-right: 1em;
+}
+
+.ul > li > a >img {
+    max-width: 100%;
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    .ul {
+        display:flex; 
+        align-content:flex-start; 
+        flex-direction:row; 
+        flex-wrap:wrap; 
+        overflow:auto;
+
+    }
+
+    .ul > li {
+        max-width: 50%;
+        display: inline;
+        margin: 0;
+    }
+    
+    .ul > li > a >img {
+        max-width: 100%;
+        height: auto;
+    }
+  }
