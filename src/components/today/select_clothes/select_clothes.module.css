@@ -1,13 +1,42 @@
-.list {
+@font-face {
+    font-family: 'MaruBuri-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1.5em;
 }
-.list > li {
+.ul > li {
     margin: 1em 1.5em;
     cursor: pointer;
+    text-align: center;
 }
 
 .margin {
-margin: 2em 0;
+margin: 0.5em 0;
 }
+
+
+.circle{
+    border: 1px solid;
+    width:2.5em;
+    height:2.5em;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .name {
+    margin-top: 0.5em;
+    font-family: 'MaruBuri-Regular';
+    font-size: 0.8rem;
+
+  }
+
+  .isActive {
+      background-color: red;
+  }

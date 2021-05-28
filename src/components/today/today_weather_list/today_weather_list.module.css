@@ -9,9 +9,9 @@
 }
 
 .ul > li {
-    max-width: 300px;
-    height: auto;
-    margin-right: 1em;
+    max-width: 280px;
+    height: 410px;
+    margin: 0 1em 1.5em 0;
 }
 
 .ul > li > a >img {

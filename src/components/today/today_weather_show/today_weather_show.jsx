@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './today_weather_show.module.css';
 
 const TodayWeatherShow = (e) => {
     
@@ -7,8 +8,8 @@ const TodayWeatherShow = (e) => {
         <>
         <nav className="location-box">
         {(typeof e.weather.main !== "undefined") ? (
-            <div className="location">{e.weather.name},
-            {Math.round(e.weather.main.temp)-273}도,
+            <div className={styles.location}>{e.weather.name}&nbsp;
+            {Math.round(e.weather.main.temp)-273}도&nbsp;
             {e.weather.weather[0].main}
             </div>
         ):('')}

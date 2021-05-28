@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import dateBulider from '../../../service/dateBulider'
 import handleGeoSuccess from '../../../service/navigator';
 import SelectClothes from '../../today/select_clothes/select_clothes';
+import styles from './today_weather.module.css';
 
 const TodayWeather = () => {
 
@@ -32,7 +33,7 @@ const TodayWeather = () => {
     
     return (
         <>
-        <div className="date">{todayShow}</div>
+        <div className={styles.date}>{todayShow}</div>
        <SelectClothes weather={weather} temperature ={temperature}/>
        </>
     )

@@ -16,6 +16,7 @@ section{position: relative;}
     margin: 0 auto;
     overflow: hidden;
     text-align: center;
+    position: relative;;
 }
 
 
