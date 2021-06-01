@@ -35,10 +35,10 @@ const TodayWeatherList = ({select, temperature}) => {
                     color = "orange"
                     break;
                 case (temp < 27):
-                    color = "red"
+                    color = " red"
                     break;
                 case (temp < 35):
-                    color = "red"
+                    color = " red"
                     break;
                 default :
                 ;
