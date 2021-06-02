@@ -6,7 +6,7 @@ import TodayWeatherShow from '../today_weather_show/today_weather_show';
 
 
 
-const SelectClothes = ({weather, temperature}) => {
+const SelectClothes = ({gender, weather, temperature}) => {
 
     const [select,getSelect] = useState();
     const [isActive,getIsActive] =useState();
@@ -74,7 +74,7 @@ const SelectClothes = ({weather, temperature}) => {
             </li>
         </ul>
         </div>
-        <TodayWeatherList select = {select} temperature = {temperature}/>
+        <TodayWeatherList gender = {gender} select = {select} temperature = {temperature}/>
         </>
 
     );

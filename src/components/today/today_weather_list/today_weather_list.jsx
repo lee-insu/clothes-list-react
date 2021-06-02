@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import styles from './today_weather_list.module.css';
 import {fireStore} from '../../../service/firebase';
+import LoadingSpinner from '../../loading/loading';
 
 
-const TodayWeatherList = ({select, temperature}) => {
+const TodayWeatherList = ({gender, select, temperature}) => {
 
     const temp = Math.round(temperature)-273;
     const [clothes,getClothes] = useState([]);
     const [tempSelect,getTempSelect] =useState();
+    const [loading,getLoading] = useState(null);
 
 
     const tempList = (temp) => {
@@ -61,15 +63,24 @@ const TodayWeatherList = ({select, temperature}) => {
     }
 
     useEffect(()=> {
-        tempList(temp)
-        select === undefined ? clothesList(tempSelect) : clothesList(select)
+        try{
+            getLoading(true)
+            tempList(temp)
+            select === undefined ? clothesList(tempSelect) : clothesList(select)
+            
+        }catch (err) {
+            getLoading(false)
+        }
     },[tempSelect,temp,select])
 
-    const ClothesLi = clothes.map(cloth => <li key ={cloth.id}><a href={cloth.link}><img src={cloth.imageURL}/></a></li>)
+    const ClothesLi = clothes.map(cloth => <li key ={cloth.id} gen={cloth.gen}><a href={cloth.link}><img src={cloth.imageURL}/></a></li>)
 
 
     return(
+        <>
+        <div className={styles.loading}>{loading ? <LoadingSpinner />: ``} </div>
         <ul className={styles.ul}>{ClothesLi}</ul>
+        </>
     )
 
 }

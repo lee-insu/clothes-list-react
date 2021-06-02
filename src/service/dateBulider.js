@@ -5,9 +5,9 @@ const dateBulider = (today) => {
         let day = days[today.getDay()];
         let date = today.getDate();
         let month = months[today.getMonth()];
-        let year = today.getFullYear();
+       // let year = today.getFullYear();
 
-        return `${month} ${date}일 ${day}요일 ${year}년`
+        return `${month} ${date}일 ${day}요일 `
 }
 
 export default dateBulider;

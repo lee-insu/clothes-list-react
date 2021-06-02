@@ -9,10 +9,13 @@ const TodayWeather = () => {
     const todayShow = dateBulider(new Date());
     const [weather,setWeather] = useState({});
     const [temperature, setTemp] = useState({});
+    const [gender, getGender] =useState();
+
+    const setGender = (e) => {
+      const gen = e.target.name;
+      getGender(gen);
+    }
     
-
-
-
     useEffect(() => {
 
       navigator.geolocation.getCurrentPosition(handleGeo)
@@ -34,7 +37,12 @@ const TodayWeather = () => {
     return (
         <>
         <div className={styles.date}>{todayShow}</div>
-       <SelectClothes weather={weather} temperature ={temperature}/>
+        <div>
+          <button onClick={setGender} name="m">m</button>
+          <button onClick={setGender} name="w">w</button>
+        </div>
+       <SelectClothes gender ={gender} weather={weather} temperature ={temperature}/>
+
        </>
     )
 
