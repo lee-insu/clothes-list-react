@@ -11,7 +11,6 @@ const TodayWeatherList = ({gender, select, temperature}) => {
     const [tempSelect,getTempSelect] =useState();
     const [loading,getLoading] = useState(null);
 
-
     const tempList = (temp) => {
         let color = ""
             switch(true) {
@@ -50,8 +49,10 @@ const TodayWeatherList = ({gender, select, temperature}) => {
              getTempSelect(color);
         }
         
-    
-    const clothesList = (temp) => {
+
+    const clothesList = (temp,gen) => {
+        if(gen === undefined) {
+
         fireStore.collection(`${temp}`)
         .onSnapshot(snapshot => {
             const array = snapshot.docs.map(doc => ({
@@ -60,21 +61,47 @@ const TodayWeatherList = ({gender, select, temperature}) => {
             }));
           getClothes(array);
         })
+
+      } else if (gen === 'm'){
+
+        fireStore.collection(`${temp}`).where("gen","==","m")
+        .onSnapshot(snapshot => {
+            const array = snapshot.docs.map(doc => ({
+                id:doc.id,
+                ...doc.data(),
+            }));
+          getClothes(array);
+        })
+
+      } else if (gen === 'w') {
+
+        fireStore.collection(`${temp}`).where("gen","==","w")
+        .onSnapshot(snapshot => {
+            const array = snapshot.docs.map(doc => ({
+                id:doc.id,
+                ...doc.data(),
+            }));
+          getClothes(array);
+        })
+
+      }
     }
+
+    
 
     useEffect(()=> {
         try{
             getLoading(true)
-            tempList(temp)
-            select === undefined ? clothesList(tempSelect) : clothesList(select)
+            tempList(temp,gender)
+            select === undefined ? clothesList(tempSelect,gender) : clothesList(select,gender);
             
         }catch (err) {
             getLoading(false)
         }
-    },[tempSelect,temp,select])
+    },[tempSelect,temp,select,gender])
 
-    const ClothesLi = clothes.map(cloth => <li key ={cloth.id} gen={cloth.gen}><a href={cloth.link}><img src={cloth.imageURL}/></a></li>)
-
+    const ClothesLi = clothes.map(cloth => <li key ={cloth.id}><a href={cloth.link}><img src={cloth.imageURL}/></a></li>)
+   
 
     return(
         <>
