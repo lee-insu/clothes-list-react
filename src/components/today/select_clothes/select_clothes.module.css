@@ -1,9 +1,4 @@
-@font-face {
-    font-family: 'MaruBuri-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&family=Knewave&family=Lemon&family=Mogra&family=Poppins:wght@200;300;400&family=Racing+Sans+One&family=Sriracha&display=swap');
 
 
 .container {
@@ -19,14 +14,14 @@
     align-items: center;
     margin-bottom: 1.5em;
     width: auto;
-
+  
 }
 
 
 .ul > li {
     margin: 1em 1.5em;
     cursor: pointer;
-    text-align: center;
+    justify-content: center;
 }
 
 .margin {
@@ -39,12 +34,12 @@ margin: 0.5em 0;
     width:2.5em;
     height:2.5em;
     border-radius: 50%;
-    text-align: center;
   }
 
   .name {
     margin-top: 0.5em;
-    font-family: 'MaruBuri-Regular';
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     font-size: 0.8rem;
     width: 120%;
 

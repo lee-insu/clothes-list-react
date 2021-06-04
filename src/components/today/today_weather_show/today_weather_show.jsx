@@ -6,10 +6,10 @@ const TodayWeatherShow = (e) => {
 
     return (
         <>
-        <nav className="location-box">
+        <nav className={styles.locationBox}>
         {(typeof e.weather.main !== "undefined") ? (
             <div className={styles.location}>{e.weather.name}&nbsp;
-            {Math.round(e.weather.main.temp)-273}도&nbsp;
+            {Math.round(e.weather.main.temp)-273}°C&nbsp; 
             {e.weather.weather[0].main}
             </div>
         ):('')}

@@ -16,6 +16,8 @@ const LoadingSpinner = () => {
                 timeout={3000}
                 
         />
+
+        <img src="./flower1.jpg" alt=""/>
         </div>
 
     )

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import styles from './select_clothes.module.css';
 import './select_clothes.css';
 import TodayWeatherList from '../today_weather_list/today_weather_list';
-import TodayWeatherShow from '../today_weather_show/today_weather_show';
 
 
 
-const SelectClothes = ({gender, weather, temperature}) => {
+
+const SelectClothes = ({gender,temperature}) => {
 
     const [select,getSelect] = useState();
     const [isActive,getIsActive] =useState();
@@ -26,16 +26,12 @@ const SelectClothes = ({gender, weather, temperature}) => {
     return (
         
         <>
-         <div className = {styles.margin}>
-        <TodayWeatherShow weather = {weather}/>
-        </div>
-        
         <div className = {styles.container}>
         <ul className={styles.ul}>
 
-            <li name=" red" onClick={onSelect} className={isActive === ' red' ? 'isActive':''}>
-                <div name=" red" className={styles.circle}></div>
-                <div name=" red" className={styles.name}>27-35°C</div>
+            <li name="red" onClick={onSelect} className={isActive === 'red' ? 'isActive':''}>
+                <div name="red" className={styles.circle}></div>
+                <div name="red" className={styles.name}>27-35°C</div>
                 </li>
 
             <li name="orange" onClick={onSelect} className={isActive === 'orange' ? 'isActive':''}>
@@ -74,6 +70,7 @@ const SelectClothes = ({gender, weather, temperature}) => {
             </li>
         </ul>
         </div>
+        
         <TodayWeatherList gender = {gender} select = {select} temperature = {temperature}/>
         </>
 

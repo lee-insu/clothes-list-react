@@ -5,7 +5,7 @@ import TodayWeather from './components/today/today_weather/today_weather';
 function App() {
   return (
     <div className = {styles.app}>
-   <Header />
+   <Header className = {styles.header}/>
    <TodayWeather />
    </div>
   );

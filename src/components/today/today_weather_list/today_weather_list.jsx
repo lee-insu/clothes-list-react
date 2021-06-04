@@ -36,10 +36,10 @@ const TodayWeatherList = ({gender, select, temperature}) => {
                     color = "orange"
                     break;
                 case (temp < 27):
-                    color = " red"
+                    color = "red"
                     break;
                 case (temp < 35):
-                    color = " red"
+                    color = "red"
                     break;
                 default :
                 ;
@@ -88,7 +88,6 @@ const TodayWeatherList = ({gender, select, temperature}) => {
     }
 
     
-
     useEffect(()=> {
         try{
             getLoading(true)
@@ -100,7 +99,7 @@ const TodayWeatherList = ({gender, select, temperature}) => {
         }
     },[tempSelect,temp,select,gender])
 
-    const ClothesLi = clothes.map(cloth => <li key ={cloth.id}><a href={cloth.link}><img src={cloth.imageURL}/></a></li>)
+const ClothesLi = clothes.map(cloth => <li key ={cloth.id}><a href={cloth.link}><img src={cloth.url}/></a></li>)
    
 
     return(
