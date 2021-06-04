@@ -43,8 +43,8 @@ const TodayWeather = () => {
         </div>
         
         <div className={styles.select}>
-        <img className= {styles.img} src="https://storage.googleapis.com/clothes-list-react-314206.appspot.com/flower4.png" onClick={setGender} name="m" alt=""/>
-        <img className= {styles.img} src="https://storage.googleapis.com/clothes-list-react-314206.appspot.com/flower3.png" onClick={setGender} name="w" alt=""/>
+          <button className={styles.btn} onClick={setGender} name="m">m</button>
+          <button className={styles.btn} onClick={setGender} name="w">w</button>
         </div>
        <SelectClothes gender ={gender} temperature ={temperature}/>
 

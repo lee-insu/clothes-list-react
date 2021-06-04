@@ -1,11 +1,4 @@
-@font-face {
-    font-family: 'MaruBuri-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&family=Knewave&family=Lemon&family=Mogra&family=Poppins:wght@200;300;400&family=Racing+Sans+One&family=Sriracha&display=swap');
 
 .date {
     font-family: 'MaruBuri-Regular';
@@ -21,9 +14,10 @@
 }
 
 
-.img {
-    width: 1.5rem;
-    height: auto;
-    cursor: pointer;
+.btn {
+    all:unset;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     margin: 0 0.5rem;
+    font-size: 0.75rem;
 }
