@@ -8,8 +8,52 @@ import TodayWeatherList from '../today_weather_list/today_weather_list';
 
 const SelectClothes = ({gender,temperature}) => {
 
+    const temp = Math.round(temperature)-273;
     const [select,getSelect] = useState();
     const [isActive,getIsActive] =useState();
+    const [tempSelect,getTempSelect] =useState();
+
+    const tempList = (temp) => {
+        let color = ""
+            switch(true) {
+                case (temp < -3):
+                    color = "black"
+                    break;
+                case (temp < 4):
+                    color = "purple"
+                    break;
+                case (temp < 8):
+                    color = "indigo"
+                    break;
+                case (temp < 11):
+                    color = "blue"
+                    break;
+                case (temp < 16):
+                    color = "green"
+                    break;
+                case (temp < 19):
+                    color = "yellow"
+                    break;
+                case (temp < 22):
+                    color = "orange"
+                    break;
+                case (temp < 27):
+                    color = "red"
+                    break;
+                case (temp < 35):
+                    color = "red"
+                    break;
+                default :
+                ;
+                return color;
+            }
+            
+             getTempSelect(color);
+        }
+        
+
+
+
 
     const onSelect = (e) => {
 
@@ -19,9 +63,10 @@ const SelectClothes = ({gender,temperature}) => {
     }
 
     useEffect(() =>{
-        getIsActive(select)
+        getIsActive(select === undefined ? tempSelect : select)
+        tempList(temp)
     }
-        ,[select]);
+        ,[temp,select,tempSelect]);
 
     return (
         
@@ -71,7 +116,7 @@ const SelectClothes = ({gender,temperature}) => {
         </ul>
         </div>
         
-        <TodayWeatherList gender = {gender} select = {select} temperature = {temperature}/>
+        <TodayWeatherList gender = {gender} select = {select} temp = {tempSelect}/>
         </>
 
     );
