@@ -18,10 +18,16 @@ section{position: relative;}
     position: relative;;
 }
 
+.header {
+    margin-bottom: 1em;
+    
+}
+
 
 
 @media only screen and (min-width:1205px) {
     .app {
         width: 1205px;
+        overflow: hidden;
     }
 }

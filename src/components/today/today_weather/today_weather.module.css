@@ -20,5 +20,18 @@
     font-weight: 300;
     margin: 0 0.5rem;
     font-size: 1.25rem;
-    color: rgb(87, 87, 87);
+    border-radius: 3px;
+    color: rgb(146, 146, 146);
+}
+
+
+.btnActive {
+    all:unset;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+    border-radius: 3px;
+    color: #000;
+
 }

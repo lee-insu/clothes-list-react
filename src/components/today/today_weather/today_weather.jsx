@@ -43,8 +43,8 @@ const TodayWeather = () => {
         </div>
         
         <div className={styles.select}>
-          <button className={styles.btn} onClick={setGender} name="m">m</button>
-          <button className={styles.btn} onClick={setGender} name="w">w</button>
+          <button className={gender === 'm' ? styles.btnActive : styles.btn} onClick={setGender} name="m">m</button>
+          <button className={gender === 'w' ? styles.btnActive : styles.btn} onClick={setGender} name="w">w</button>
         </div>
        <SelectClothes gender ={gender} temperature ={temperature}/>
 
