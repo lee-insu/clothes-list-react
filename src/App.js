@@ -3,7 +3,7 @@ import Sticky from 'react-sticky-el';
 import Header from './components/header/header';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import TodayWeather from './components/today/today_weather/today_weather';
-import Recruitment from './components/recruit/recruitment/recruitment';
+import Recruitment from './components/recruit/recruitment/recruit';
 
 function App() {
   return (
@@ -14,9 +14,8 @@ function App() {
          <Header/>
          </div>
       </Sticky>
-    
-        <Switch>
-          <Route exact path='/'>
+      <Switch>
+      <Route exact path='/'>
         <div className = {styles.today}>
         <TodayWeather />
         </div>

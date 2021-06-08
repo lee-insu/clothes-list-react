@@ -32,3 +32,61 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .ul > :nth-child(4) {
+        display: none;
+    }
+    
+    .ul > :nth-child(5) {
+        display: none;
+    }
+
+    .ul > li {
+        font-weight: 800;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+
+.ul > :nth-child(3) {
+    display: none;
+}
+
+
+.ul > :nth-child(4) {
+    display: none;
+}
+
+.ul > :nth-child(5) {
+    display: none;
+}
+
+.ul > li {
+    font-weight: 800;
+}
+}
+
+@media screen and (max-width: 480px) {
+
+
+    
+.ul > :nth-child(3) {
+    display: none;
+}
+
+
+.ul > :nth-child(4) {
+    display: none;
+}
+
+.ul > :nth-child(5) {
+    display: none;
+}
+.ul > li {
+    font-weight: 800;
+}
+
+}
