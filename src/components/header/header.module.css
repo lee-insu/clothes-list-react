@@ -8,6 +8,7 @@
     background-color: #fff;
     display: flex;
     justify-content: space-between;
+    z-index: 9999;
 
 
 }
@@ -27,7 +28,7 @@
 }
 
 .ul > li {
-    margin-top: 0.7rem;
+    margin-top: 0.6rem;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-weight: 900;

@@ -26,18 +26,69 @@
     scroll-behavior:smooth;
 }
 
-.main {
-    padding-top: 10rem;
+.n2 {
+    height: 100vh;
+    scroll-behavior:smooth;
 }
 
+.main {
+    padding-top: 3rem;
+}
 
-.logo {
-    font-size: 5rem;
-    font-family: 'Staatliches', cursive;
+.img {
+    width: 40%;
 }
 
 .nt {
-    font-family: 'IBMPlexSansKR-Regular';
-    font-size: 1rem;
+    font-family: 'IBMPlexSansKR-Bold';
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
+.nt1{
+    font-family: 'IBMPlexSansKR-Bold';
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+}
+.nt2{
+    margin-top: 3rem;
+    font-family: 'IBMPlexSansKR-Bold';
+    font-size: 1.3rem;
+}
+
+p {
+    font-family: 'IBMPlexSansKR-Regular';
+
+}
+
+.oo {
+    margin: 0 auto;
+    line-height: 1.8rem;
+    width: 50%;
+    
+    
+}
+
+
+@media screen and (max-width: 480px) {
+
+.nt {
+    font-family: 'IBMPlexSansKR-Bold';
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.nt1 {
+    margin-bottom: 1rem;
+}
+
+.oo {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.img {
+    width: 90%;
+}
+
+}

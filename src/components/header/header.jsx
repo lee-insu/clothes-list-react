@@ -23,11 +23,9 @@ const Header = () => {
             <div className={styles.logo} onClick={()=> history.push('/')} >oh Co!</div>
             <ul className={styles.ul}>
                 {windowWidth < 480 || window.innerWidth < 480 ? 
-                <li onClick={() => history.push('/recruit')}>CREW </li>:
+                <li onClick={() => history.push('/recruit')}>RECRUiT </li>:
                 <li onClick={() => history.push('/recruit')}>CREW RECRUiT</li>
              }   
-                
-               
             </ul>
         </div>
 
