@@ -5,3 +5,11 @@
     font-weight: 300;
     font-size:0.75em;
 }
+
+.not {
+    font-family: 'IBMPlexSansKR-Light';
+    font-size: 0.75rem;
+    color: rgb(51, 51, 51);
+    margin-top: 1rem;
+
+}

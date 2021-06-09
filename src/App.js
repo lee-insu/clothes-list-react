@@ -4,6 +4,7 @@ import Header from './components/header/header';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import TodayWeather from './components/today/today_weather/today_weather';
 import Recruitment from './components/recruit/recruitment/recruit';
+import ImportFile from './components/recruit/import-file/import-file';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
          <Header/>
       </Sticky>
       <Switch>
-      <Route exact path='/'>
+      <Route exact path='/clothes-list-react'>
         <div className = {styles.today}>
         <TodayWeather />
         </div>
@@ -22,8 +23,11 @@ function App() {
         <Route path='/recruit'>
           <Recruitment/>
         </Route>
-
+        <Route path='/import'>
+          <ImportFile/>
+        </Route>
         </Switch>
+
       </BrowserRouter>
 
    </div>

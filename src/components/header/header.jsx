@@ -20,11 +20,11 @@ const Header = () => {
     },[])
     return (
         <div className = {styles.header}>
-            <div className={styles.logo} onClick={()=> history.push('/')} >oh Co!</div>
+            <div className={styles.logo} onClick={()=> history.push('/clothes-list-react')} >oh Co!</div>
             <ul className={styles.ul}>
                 {windowWidth < 480 || window.innerWidth < 480 ? 
-                <li onClick={() => history.push('/recruit')}>RECRUiT </li>:
-                <li onClick={() => history.push('/recruit')}>CREW RECRUiT</li>
+                <li onClick={() => history.push('/recruit')}>RECRUIT </li>:
+                <li onClick={() => history.push('/recruit')}>CREW RECRUIT</li>
              }   
             </ul>
         </div>
