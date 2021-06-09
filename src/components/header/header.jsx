@@ -26,10 +26,7 @@ const Header = () => {
                 <li onClick={() => history.push('/recruit')}>CREW </li>:
                 <li onClick={() => history.push('/recruit')}>CREW RECRUiT</li>
              }   
-                <li>LIKE</li>
-                <li>LIKE</li>
-                <li>LIKE</li>
-                <li>LIKE</li>
+                
                
             </ul>
         </div>

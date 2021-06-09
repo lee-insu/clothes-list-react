@@ -9,7 +9,7 @@ function App() {
   return (
     <div className = {styles.app}>
       <BrowserRouter>
-      <Sticky topOffset={50}>
+      <Sticky topOffset={42}>
          <div className = {styles.header}>
          <Header/>
          </div>
