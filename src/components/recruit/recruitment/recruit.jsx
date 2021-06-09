@@ -18,10 +18,20 @@ const Recruitment = () => {
         </section>
 
         <section className={styles.n2}>
-        <div className={styles.nt2}>"오늘 뭐 입지?"</div>
+        <img className={styles.img2} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source2.svg" alt=""/>
+        <div className={styles.nt2}>크루가 되어 오코에서 홍보하세요</div>
         <p className={styles.oo}>
-        ㅇdd
+        오늘 날씨에 어울리는 옷을 보여주기 위해 많은 코디 사진이 필요합니다. 오코는 크루들의 코디 사진을 제공받는 대신,
+        크루들에게 자신의 인스타그램, 쇼핑몰을 홍보할 수 있도록 도와주려 합니다. 
         </p>
+        <p className={styles.tt}>
+        제공해준 코디 사진에 크루들의 계정이나 쇼핑몰의 링크를 걸어
+        이용자가 코디가 마음에 들었을 때 쉽게 유입시키고 팬을 만들 수 있습니다. 
+        </p>
+        <p className={styles.tx}>
+            오코는 같이 성장하는 것을 목표합니다. 오코가 성장할수록 여러분의 홍보도 손쉽게 이루어집니다.
+        </p>
+        
         </section>
         </>
     )

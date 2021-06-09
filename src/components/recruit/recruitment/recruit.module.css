@@ -28,6 +28,7 @@
 
 .n2 {
     height: 100vh;
+    padding-top: 5rem;
     scroll-behavior:smooth;
 }
 
@@ -37,6 +38,11 @@
 
 .img {
     width: 40%;
+}
+
+.img2 {
+    width: 40%;
+    top: 30%;
 }
 
 .nt {
@@ -51,9 +57,10 @@
     margin-top: 2.5rem;
 }
 .nt2{
-    margin-top: 3rem;
+    margin-top: 2rem;
     font-family: 'IBMPlexSansKR-Bold';
     font-size: 1.3rem;
+    margin-top: 4.5rem;
 }
 
 p {
@@ -65,8 +72,22 @@ p {
     margin: 0 auto;
     line-height: 1.8rem;
     width: 50%;
+    font-family: 'IBMPlexSansKR-Light';
     
-    
+}
+
+.tt {
+    font-family: 'IBMPlexSansKR-Light';
+    margin: 0 auto;
+    line-height: 1.8rem;
+    width: 50%;
+}
+
+.tx {
+    font-family: 'IBMPlexSansKR-Regular';
+    margin: 0 auto;
+    line-height: 1.8rem;
+    width: 50%;
 }
 
 
@@ -82,12 +103,33 @@ p {
     margin-bottom: 1rem;
 }
 
+.nt2 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
 .oo {
     margin: 0 auto;
     width: 90%;
 }
 
+.tt{
+    padding-top: 1rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.tx{
+    padding-top: 1rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
 .img {
+    width: 90%;
+}
+
+.img2 {
     width: 90%;
 }
 
