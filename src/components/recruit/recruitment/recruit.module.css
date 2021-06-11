@@ -34,7 +34,7 @@
 
 .n3 {
     height: 100vh;
-    padding-top: 5rem;
+    padding-top: 3rem;
     scroll-behavior:smooth;
 }
 
@@ -63,11 +63,13 @@
     margin-top: 2.5rem;
 }
 .nt2{
-    margin-top: 2rem;
+
     font-family: 'IBMPlexSansKR-Bold';
     font-size: 1.3rem;
     margin-top: 4.5rem;
 }
+
+
 
 p {
     font-family: 'IBMPlexSansKR-Regular';
@@ -92,7 +94,7 @@ p {
 .recruit {
     font-family: 'IBMPlexSansKR-Bold';
     font-size: 1.5rem;
-    margin: 1.7rem auto;
+    margin: 1.1rem auto;
     border: solid 1px #000;
     border-radius: 1rem;
     width: 8rem;
@@ -120,6 +122,7 @@ p {
     margin-top: 4rem;
     margin-bottom: 1rem;
 }
+
 .oo {
     margin: 0 auto;
     width: 90%;
