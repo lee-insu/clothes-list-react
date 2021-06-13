@@ -1,11 +1,13 @@
 import React, { useRef, useState } from 'react';
 import {fireStore,storage} from '../../../service/firebase';
+import styles from './import-file.module.css';
 
 const ImportFile = () => {
 
     
     const [insta, setInsta] = useState("");
     const [email,setEmail] = useState("");
+    const [shop,setShop] = useState("");
     const [img,setImg] =useState("");
     
     const fileInput = useRef();
@@ -17,6 +19,7 @@ const ImportFile = () => {
             insta,
             email,
             img:img.name,
+            shop,
             month:new Date().getMonth(),
             day:new Date().getDate(),
         }); 
@@ -27,6 +30,7 @@ const ImportFile = () => {
         }
         setInsta('');
         setEmail('');
+        setShop('');
         fileInput.current.value='';
         alert('제출완료');
 
@@ -36,30 +40,52 @@ const ImportFile = () => {
         const {target:{name,value}} = e;
 
         if(name === 'insta') {
-            setInsta(value)
+            setInsta(value);
         }
         else if (name === 'email') {
-            setEmail(value)
+            setEmail(value);
         }
         else if (name === 'img') {
-            setImg(e.target.files[0])
-            
+            setImg(e.target.files[0]);
+        }
+        else if (name === 'shop') {
+            setShop(value);
         }
     }
 
 
     return (
         <>
-        <h1>gi</h1>
+        <div className={styles.n1}>
+             <img className={styles.img} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source4.svg" alt="source4"/>
 
-    <p>폼을 만들고 지원서를 작성한다 내 메일로 보낼까 아니면 클라우드 저장소에 담길 수 있게 할까?
-        옷의 기준은 데일리룩 전신이 다 나오도록 
-        그리고 개인 쇼핑몰 url 또는 인스타 아이디 
+             <div className={styles.nt1}>
+                 머리부터 발끝까지!
+             </div>
+                <p className={styles.oo}>
+                여러분의 스타일을 가장 잘 들어낼 수 있는 사진을 올려주세요.
+                1번과 2번처럼 전체적으로 코디를 파악할 수 있는 사진이어야 합니다.
+                연락 받을 인스타 계정이나 이메일을 적어주시면 빠른 시일 내에 연락하겠습니다.
+                개인 쇼핑몰을 하고 있다면 쇼핑몰 사이트도 적어주세요.(블로그,인스타 마켓 모두 가능)
+                </p>
+        
 
-    </p>
+        <form className={styles.form} onSubmit={onSubmit}>
+          
+          <div className={styles.fileBox}>
+          <div className={styles.name}>{img ? img.name:'파일이 없습니다' }</div>
+          <label className={styles.fileLabel} htmlFor="file">사진 올리기</label>
+          <input 
+            className={styles.file}
+            id="file"
+            type="file"
+            name="img"
+            onChange={onChange}
+            ref = {fileInput}
+            />
+            </div>
 
 
-        <form onSubmit={onSubmit}>
             <input 
             type="text"
             placeholder="연락 받을 인스타 계정"
@@ -75,18 +101,23 @@ const ImportFile = () => {
             value={email}
             onChange={onChange}
             />
-            
-            <input 
-            type="file"
-            name="img"
-            onChange={onChange}
-            ref = {fileInput}
-            />
 
-            <input type="submit"/>
+           
+            <input 
+            type="text"
+            placeholder="쇼핑몰 사이트"
+            name ="shop"
+            value={shop}
+            onChange={onChange}
+            />
+            
+            
+            <label className={styles.submitLabel} htmlFor="submit">지원하기</label>
+            <input id="submit"className={styles.submit} type="submit"/>
 
 
         </form>
+        </div>
     </>
     );
 }
