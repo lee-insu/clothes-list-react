@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import {fireStore} from '../../../service/firebase';
+import React, { useRef, useState } from 'react';
+import {fireStore,storage} from '../../../service/firebase';
 
 const ImportFile = () => {
 
     
     const [insta, setInsta] = useState("");
     const [email,setEmail] = useState("");
-
-
+    const [img,setImg] =useState("");
+    
+    const fileInput = useRef();
 
 
     const onSubmit = async(e) => {
@@ -15,12 +16,19 @@ const ImportFile = () => {
         await fireStore.collection('recruit').add({
             insta,
             email,
+            img:img.name,
             month:new Date().getMonth(),
             day:new Date().getDate(),
-        });  
+        }); 
+        
+        if(img !== null) {
+            storage.ref(`imgs/${img.name}`).put(img)
+
+        }
         setInsta('');
         setEmail('');
-        alert('제출완료')
+        fileInput.current.value='';
+        alert('제출완료');
 
     } 
 
@@ -32,6 +40,10 @@ const ImportFile = () => {
         }
         else if (name === 'email') {
             setEmail(value)
+        }
+        else if (name === 'img') {
+            setImg(e.target.files[0])
+            
         }
     }
 
@@ -62,6 +74,13 @@ const ImportFile = () => {
             name ="email"
             value={email}
             onChange={onChange}
+            />
+            
+            <input 
+            type="file"
+            name="img"
+            onChange={onChange}
+            ref = {fileInput}
             />
 
             <input type="submit"/>

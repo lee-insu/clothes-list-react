@@ -3,9 +3,6 @@ import styles from './today_weather_list.module.css';
 import {fireStore} from '../../../service/firebase';
 import LoadingSpinner from '../../loading/loading';
 
-document.cookie = "safeCookie1=foo; SameSite=Lax"; 
-document.cookie = "safeCookie2=foo"; 
-document.cookie = "crossCookie=bar; SameSite=None; Secure";
 
 
 const TodayWeatherList = ({gender, select, temp}) => {
