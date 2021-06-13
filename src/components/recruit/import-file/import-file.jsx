@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import {fireStore,storage} from '../../../service/firebase';
 import styles from './import-file.module.css';
 
@@ -11,6 +12,7 @@ const ImportFile = () => {
     const [img,setImg] =useState("");
     
     const fileInput = useRef();
+    const history = useHistory();
 
 
     const onSubmit = async(e) => {
@@ -32,7 +34,8 @@ const ImportFile = () => {
         setEmail('');
         setShop('');
         fileInput.current.value='';
-        alert('제출완료');
+        alert('지원이 완료되었습니다');
+        history.push('/recruit');
 
     } 
 
@@ -82,6 +85,7 @@ const ImportFile = () => {
             name="img"
             onChange={onChange}
             ref = {fileInput}
+            required
             />
             </div>
 
@@ -113,7 +117,7 @@ const ImportFile = () => {
             
             
             <label className={styles.submitLabel} htmlFor="submit">지원하기</label>
-            <input id="submit"className={styles.submit} type="submit"/>
+            <input  id="submit"className={styles.submit} type="submit"/>
 
 
         </form>
