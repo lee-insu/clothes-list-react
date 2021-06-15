@@ -99,7 +99,7 @@ const ImportFile = () => {
 
             <input 
             type="text"
-            placeholder="연락 받을 이메일 계정"
+            placeholder="연락 받을 이메일 주소"
             name ="email"
             value={email}
             onChange={onChange}
@@ -108,7 +108,7 @@ const ImportFile = () => {
            
             <input 
             type="text"
-            placeholder="쇼핑몰 사이트"
+            placeholder="개인 쇼핑몰 사이트 주소"
             name ="shop"
             value={shop}
             onChange={onChange}

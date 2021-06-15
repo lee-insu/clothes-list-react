@@ -27,12 +27,12 @@
 }
 
 .form {
-
+    width: 50%;
     scroll-behavior:smooth;
     display: flex;
     flex-direction: column;
     height: 35vh;
-    margin: 0 auto;
+    margin: 2em auto;
 }
 
 .form > input {
