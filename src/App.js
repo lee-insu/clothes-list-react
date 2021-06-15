@@ -23,7 +23,7 @@ function App() {
          <Header/>
       </Sticky>
       <Switch>
-      <Route exact path='/clothes-list-react'>
+      <Route exact path='/'>
         <div className = {styles.today}>
         <TodayWeather />
         </div>
