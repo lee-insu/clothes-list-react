@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import styles from './recruit.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Recruitment = () => {
 
     const history = useHistory();
-
+    useEffect(()=>{
+    AOS.init({
+        duration:1500
+    });
+    },[])
 
     return (
         <>
-        <div className={styles.n1}>
+        <div data-aos="fade-up" className={styles.n1}>
             <div className={styles.main}>
                 <div className={styles.nt}>오코와 함께 성장할<br/> 크루를 모집합니다</div>
                 <img className={styles.img} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source.svg" alt="source1"/>
@@ -22,7 +28,7 @@ const Recruitment = () => {
               </div>
         </div>
 
-        <div className={styles.n2}>
+        <div data-aos="fade-up" className={styles.n2}>
             <img className={styles.img2} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source2.svg" alt="source2"/>
             <div className={styles.nt2}>크루가 되어 오코에서 홍보하세요</div>
             <p className={styles.oo}>
@@ -35,7 +41,7 @@ const Recruitment = () => {
             </p>
         </div>
         
-        <div className={styles.n3}>
+        <div data-aos="fade-up" className={styles.n3}>
             <img className={styles.img2} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source3.svg" alt="source3"></img>
             <div className={styles.nt2}>패션에 관심 많은 그대에게</div>
             <p className={styles.oo}>

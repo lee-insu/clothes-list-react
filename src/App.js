@@ -6,6 +6,14 @@ import TodayWeather from './components/today/today_weather/today_weather';
 import Recruitment from './components/recruit/recruitment/recruit';
 import ImportFile from './components/recruit/import-file/import-file';
 import Footer from './components/footer/footer';
+import {analytics} from './service/firebase';
+
+
+
+analytics.logEvent('event', 'screen_view', {
+  screen_name: 'recruit'
+});
+
 
 function App() {
   return (
