@@ -11,7 +11,7 @@ const TodayWeatherList = ({gender, select, temp}) => {
     const [clothes,getClothes] = useState([]);
     const [loading,getLoading] = useState(null);
 
-
+  
 
     const clothesList = (temp,gen) => {
         if(gen === undefined) {
@@ -61,11 +61,12 @@ const TodayWeatherList = ({gender, select, temp}) => {
         }
     },[temp,select,gender])
 
-const ClothesLi = clothes.map(cloth => <li key ={cloth.id}><a href={cloth.link}><img src={cloth.url}/></a></li>)
+const ClothesLi = clothes.map(cloth => <li key ={cloth.id}><a href={cloth.link}><img src={cloth.url} alt={cloth.id}/></a></li>)
    
 
     return(
         <>
+        
         <div className={styles.loading}>{loading ? <LoadingSpinner />: ``} </div>
         <ul className={styles.ul}>{ClothesLi}</ul>
         </>

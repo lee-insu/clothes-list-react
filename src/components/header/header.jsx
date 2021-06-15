@@ -20,7 +20,7 @@ const Header = () => {
     },[])
     return (
         <div className = {styles.header}>
-            <div className={styles.logo} onClick={()=> history.push('/clothes-list-react')} >oh Co!</div>
+            <div className={styles.logo} onClick={()=> history.push('/clothes-list-react')} >OH CO!</div>
             <ul className={styles.ul}>
                 {windowWidth < 480 || window.innerWidth < 480 ? 
                 <li onClick={() => history.push('/recruit')}>지원하기 </li>:

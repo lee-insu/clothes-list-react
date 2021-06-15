@@ -19,27 +19,27 @@ const SelectClothes = ({gender,temperature}) => {
                     color = "black"
                     break;
                 case (temp < 4):
-                    color = "purple"
+                    color = "black"
                     break;
                 case (temp < 8):
-                    color = "indigo"
+                    color = "purple"
                     break;
                 case (temp < 11):
-                    color = "blue"
+                    color = "indigo"
                     break;
                 case (temp < 16):
-                    color = "green"
+                    color = "blue"
                     break;
                 case (temp < 19):
-                    color = "yellow"
+                    color = "green"
                     break;
                 case (temp < 22):
-                    color = "orange"
+                    color = "yellow"
                     break;
                 case (temp < 27):
-                    color = "red"
+                    color = "orange"
                     break;
-                case (temp < 35):
+                case (temp < 45):
                     color = "red"
                     break;
                 default :

@@ -5,6 +5,7 @@ import SelectClothes from '../../today/select_clothes/select_clothes';
 import TodayWeatherShow from '../today_weather_show/today_weather_show';
 import styles from './today_weather.module.css';
 
+
 const TodayWeather = () => {
 
     // const todayShow = dateBulider(new Date());
@@ -12,6 +13,7 @@ const TodayWeather = () => {
     const [temperature, setTemp] = useState({});
     const [gender, getGender] =useState();
 
+   
     const renderPosition = useCallback(()=> {
         console.log('callback')
     })

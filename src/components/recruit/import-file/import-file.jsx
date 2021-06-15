@@ -34,7 +34,7 @@ const ImportFile = () => {
         setEmail('');
         setShop('');
         fileInput.current.value='';
-        alert('지원이 완료되었습니다');
+        alert('지원이 완료되었습니다. 감사합니다!');
         history.push('/recruit');
 
     } 
@@ -66,13 +66,12 @@ const ImportFile = () => {
                  머리부터 발끝까지!
              </div>
                 <p className={styles.oo}>
-                여러분의 스타일을 가장 잘 들어낼 수 있는 사진을 올려주세요.
-                1번과 2번처럼 전체적으로 코디를 파악할 수 있는 사진이어야 합니다.
+                1번 또는 2번의 비율로 여러분의 스타일을 가장 잘 들어낼 수 있는 사진을 올려주세요.
                 연락 받을 인스타 계정이나 이메일을 적어주시면 빠른 시일 내에 연락하겠습니다.
                 개인 쇼핑몰을 하고 있다면 쇼핑몰 사이트도 적어주세요.(블로그,인스타 마켓 모두 가능)
                 </p>
         
-
+               
         <form className={styles.form} onSubmit={onSubmit}>
           
           <div className={styles.fileBox}>

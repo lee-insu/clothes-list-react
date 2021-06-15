@@ -15,8 +15,8 @@ const Recruitment = () => {
                 <img className={styles.img} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source.svg" alt="source1"/>
                 <div className={styles.nt1}>"오늘 뭐 입지?"</div>
                    <p className={styles.oo}>
-                단순하면서도 큰 고민인 오늘의 코디를 돕기 위해 오코는 만들어졌습니다.
-                  사계절이라고 말하기가 무색할정도로 날씨의 변동이 잦아지면서 오늘과 어울리는 옷을 찾는 시간은 더 늘어나고 있습니다.
+                  단순하면서도 큰 고민인 오늘의 코디를 돕기 위해 오코는 만들어졌습니다.
+                  외출하기 전 '오늘 춥나?', '오늘 덥나?' 고민한 적 있으신가요? 
                   오코는 데이터를 통해 지금 날씨에 어울리는 코디를 찾아줍니다.
                   </p>
               </div>
@@ -27,7 +27,7 @@ const Recruitment = () => {
             <div className={styles.nt2}>크루가 되어 오코에서 홍보하세요</div>
             <p className={styles.oo}>
             오늘 날씨에 어울리는 옷을 보여주기 위해 많은 코디 사진이 필요합니다. 오코는 크루들의 코디 사진을 제공받는 대신,
-            크루들에게 자신의 인스타그램, 쇼핑몰, 마켓, 블로그 등 홍보할 수 있도록 도와주려 합니다. 
+            크루들의 인스타그램, 쇼핑몰, 마켓, 블로그 등 무료로 홍보할 수 있도록 도와주려 합니다. 
              </p>
              <p className={styles.tt}>
             제공해준 코디 사진에 크루들의 계정이나 쇼핑몰의 링크를 걸어
