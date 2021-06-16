@@ -60,14 +60,14 @@ const ImportFile = () => {
    
     useEffect(()=>{
         AOS.init({
-            duration:1500
+            duration:800
         });
         },[])
     
 
     return (
         <>
-        <div data-aos="fade-up">
+        <div data-aos="fade-down">
         <div className={styles.n1}>
              <img className={styles.img} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source4.svg" alt="source4"/>
 
