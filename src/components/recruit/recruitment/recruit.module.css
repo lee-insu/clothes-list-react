@@ -106,6 +106,10 @@ p {
 
 }
 
+.aosFix[data-aos][data-aos].aos-animate {
+    transform: unset;
+}
+
 
 
 @media screen and (max-width: 480px) {

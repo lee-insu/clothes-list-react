@@ -15,7 +15,7 @@ const Recruitment = () => {
 
     return (
         <>
-        <div data-aos="fade-up" className={styles.n1}>
+        <section data-aos="fade-up"  className={styles.n1}>
             <div className={styles.main}>
                 <div className={styles.nt}>오코와 함께 성장할<br/> 크루를 모집합니다</div>
                 <img className={styles.img} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source.svg" alt="source1"/>
@@ -26,9 +26,9 @@ const Recruitment = () => {
                   오코는 데이터를 통해 지금 날씨에 어울리는 코디를 찾아줍니다.
                   </p>
               </div>
-        </div>
+        </section>
 
-        <div data-aos="fade-up" className={styles.n2}>
+        <section data-aos="fade-up" className={styles.n2}>
             <img className={styles.img2} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source2.svg" alt="source2"/>
             <div className={styles.nt2}>크루가 되어 오코에서 홍보하세요</div>
             <p className={styles.oo}>
@@ -39,9 +39,9 @@ const Recruitment = () => {
             제공해준 코디 사진에 크루들의 계정이나 쇼핑몰의 링크를 걸어
             이용자가 코디가 마음에 들었을 때 쉽게 유입시키고 팬을 만들 수 있습니다. 
             </p>
-        </div>
+        </section>
         
-        <div data-aos="fade-up" className={styles.n3}>
+        <section data-aos="fade-up" className={styles.n3}>
             <img className={styles.img2} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source3.svg" alt="source3"></img>
             <div className={styles.nt2}>패션에 관심 많은 그대에게</div>
             <p className={styles.oo}>
@@ -53,7 +53,7 @@ const Recruitment = () => {
                 DM, 이메일로 연락하겠습니다.
             </p>
             <div onClick={()=> history.push('/import')} className={styles.recruit}>지원하기</div>
-        </div>
+        </section>
 
        
 

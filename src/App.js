@@ -11,7 +11,7 @@ import {analytics} from './service/firebase';
 
 
 analytics.logEvent('event', 'screen_view', {
-  screen_name: 'recruit'
+  screen_name: 'app'
 });
 
 
@@ -19,8 +19,10 @@ function App() {
   return (
     <div className = {styles.app}>
       <BrowserRouter>
-      <Sticky topOffset={42}>
+      <Sticky stickyStyle={{zIndex: 1}} topOffset={42}>
+        <div className={styles.header}>
          <Header/>
+         </div>
       </Sticky>
       <Switch>
       <Route exact path='/'>

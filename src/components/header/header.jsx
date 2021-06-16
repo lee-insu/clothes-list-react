@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {useHistory} from 'react-router-dom';
 import styles from './header.module.css'
 
+
 const Header = () => {
 
     const history = useHistory();
@@ -13,10 +14,12 @@ const Header = () => {
 
 
     useEffect(()=> {
+
         window.addEventListener('resize',handleResize);
         return () => {
             window.removeEventListener('resize',handleResize);
         }
+
     },[])
     return (
         <div className = {styles.header}>
