@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# OH CO! 오늘의 코디
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+"오늘 날씨에 이 옷이 어울리나?" 외출하기 전 이런 고민하신 적 있으신가요? 오코는 여러분이 사는 곳의 온도에 따라서 날씨에 어울리는 코디를 찾아줍니다.  
 
-## Available Scripts
+## 작업하면서 배웠던 것들
 
-In the project directory, you can run:
+작업하면서 어려웠거나 이해도가 부족했던 부분입니다.
 
-### `yarn start`
+### `useEffect의 무한루프`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+코디 리스트를 출력하는 과정 중에 무한으로 렌더가 일어나 브라우저가 다운되는 현상을 겪었습니다.
+componentDidMount와 componentDidUpdate, componentWillUnmount의 역할을 하는 useEffect에서 무한루프가 일어난 것입니다.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ useEffect(() => {
+      
+      navigator.geolocation.getCurrentPosition(handleGeo)
+      function handleGeo(position){
+          try{
+           handleGeoSuccess(position)
+          .then(res => res.json())
+          .then(async result => {
+            await setWeather(result);
+                   setTemp(result.main.temp);
+          });
+        } catch(error) {
+            console.log(`error ${error}`);
+        }
+      };      
+    })
 
-### `yarn test`
+여러 블로그와 [공식 문서]https://ko.reactjs.org/docs/hooks-effect.html 를 참고했을 때
+setState가 계속 업데이트 되면서 반복이 되어 불필요한 성능 저하가 일어났다는 것을 알았습니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 해결 방법
+Hook에서 componentDidUpdate 역할을 하는 두 번째 인자에 빈 배열을 넣어 문제를 해결했습니다.
 
-### `yarn build`
+ useEffect(() => {
+      
+      navigator.geolocation.getCurrentPosition(handleGeo)
+      function handleGeo(position){
+          try{
+           handleGeoSuccess(position)
+          .then(res => res.json())
+          .then(async result => {
+            await setWeather(result);
+                   setTemp(result.main.temp);
+          });
+        } catch(error) {
+            console.log(`error ${error}`);
+        }
+      };      
+    },[])
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+이 두 번째 인자는 의존성 배열로, 첫 번째 인자로 나타나는 함수가 두 번째 인자로 등장하는 배열의 원소가 무엇인지에 따라 의존적으로 이벤트를 실행시킨다는 의미를 가집니다. 빈 배열을 넣어 변화할 인자가 없기 때문에 무한루프에서 탈출 할 수 있었습니다. 이 문제로 리액트의 라이프사이클을 명확하게 알고 있어야 한다는 것을 알게 되었습니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `fetch() 함수에 대해서`
 
-### `yarn eject`
+외부에서 데이터를 받아오려면 api를 호출하고 데이터를 응답 받습니다. 이 프로젝트에서 open Weather api를 통해 날씨 데이터를 가져오는 과정에 이해도가 부족했습니다. fetch 함수를 제대로 쓰기 위해 http 통신의 요청과 응답에 대한 이해, Promise의 깊은 이해가 필요했습니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+먼저 같은 함수에서 es5와 es6 둘 다 적어봐야 더 이해하기 쉬울 것이라 생각했습니다.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+es6
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+fetch('api주소')
+.then(res => res.json());
+.then(res => {
+    //data를 받은 후의 로직
+});
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+es5
 
-## Learn More
+fetch('api주소')
+.then(function(res) {
+    return res.json();
+})
+.then(function(res){
+    //data를 받은 후의 로직
+})
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+이렇게 화살표 함수 전 후로 fetch 함수를 더 복잡하게 쓸 수 있도록 이해했습니다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### res => res.json()의 의미 
 
-### Code Splitting
+첫 번째 res => res.json()에서 어떤 값이 리턴 돠는 지 궁금했습니다. console.log로 확인 해본 결과
+첫 번째 res는 http 통신 요청과 응답에서 응답의 정보를 담고 있는 객체였습니다. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+console를 확인 했을 때 실제 데이터는 보이지 않습니다.
+응답으로 받은 JSON 데이터를 사용하기 위해서는 객체의 JSON 함수를 호출하고 return 합니다.
+그러면 두 번째 res 함수에서 응답 데이터를 받을 수 있는 원리였습니다.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

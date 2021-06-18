@@ -30,8 +30,8 @@ const TodayWeather = () => {
           try{
            handleGeoSuccess(position)
           .then(res => res.json())
-          .then(async result => {
-            await setWeather(result);
+          .then(result => {
+                   setWeather(result);
                    setTemp(result.main.temp);
           });
         } catch(error) {
