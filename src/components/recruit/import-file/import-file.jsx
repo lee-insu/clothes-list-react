@@ -69,7 +69,7 @@ const ImportFile = () => {
         <>
         <div data-aos="fade-down">
         <div className={styles.n1}>
-             <img className={styles.img} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source4.svg" alt="source4"/>
+             <img className={styles.img} src="https://storage.googleapis.com/clothes-list-react-314206.appspot.com/source4.svg" alt="source4"/>
 
              <div className={styles.nt1}>
                  머리부터 발끝까지!

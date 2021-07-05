@@ -18,7 +18,7 @@ const Recruitment = () => {
         <section data-aos="fade-up"  className={styles.n1}>
             <div className={styles.main}>
                 <div className={styles.nt}>오코와 함께 성장할<br/> 크루를 모집합니다</div>
-                <img className={styles.img} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source.svg" alt="source1"/>
+                <img className={styles.img} src="https://storage.googleapis.com/clothes-list-react-314206.appspot.com/source.svg" alt="source1"/>
                 <div className={styles.nt1}>"오늘 뭐 입지?"</div>
                    <p className={styles.oo}>
                   단순하면서도 큰 고민인 오늘의 코디를 돕기 위해 오코는 만들어졌습니다.
@@ -29,7 +29,7 @@ const Recruitment = () => {
         </section>
 
         <section data-aos="fade-up" className={styles.n2}>
-            <img className={styles.img2} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source2.svg" alt="source2"/>
+            <img className={styles.img2} src="https://storage.googleapis.com/clothes-list-react-314206.appspot.com/source2.svg" alt="source2"/>
             <div className={styles.nt2}>크루가 되어 오코에서 홍보하세요</div>
             <p className={styles.oo}>
             오늘 날씨에 어울리는 옷을 보여주기 위해 많은 코디 사진이 필요합니다. 오코는 크루들의 코디 사진을 받는 대신,
@@ -42,7 +42,7 @@ const Recruitment = () => {
         </section>
         
         <section data-aos="fade-up" className={styles.n3}>
-            <img className={styles.img2} src="https://storage.googleapis.com/staging.clothes-list-react-314206.appspot.com/source3.svg" alt="source3"></img>
+            <img className={styles.img2} src="https://storage.googleapis.com/clothes-list-react-314206.appspot.com/source3.svg" alt="source3"></img>
             <div className={styles.nt2}>패션에 관심 많은 그대에게</div>
             <p className={styles.oo}>
             코디에 관심이 많다면 유명해지고 싶은 사람, 셀럽, 쇼핑몰 사장님 모두 크루로 지원 가능합니다.
