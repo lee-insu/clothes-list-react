@@ -100,6 +100,6 @@ res => res.json()의 의미
 console를 확인 했을 때 실제 데이터는 보이지 않습니다. 응답으로 받은 JSON 데이터를 사용하기 위해서는 객체의 JSON 함수를 호출하고 return 합니다.___ 그러면 두 번째 res 함수에서 응답 데이터를 받을 수 있는 원리였습니다.
 
 ## 제작 과정
-제작기간: 27일
+제작기간: 27일<br/>
 사용한 기술,서비스: React.js, Firebase, openWeather API
 
